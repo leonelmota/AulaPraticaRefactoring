@@ -1,19 +1,7 @@
 import java.util.Enumeration;
 
 public class TextStatement extends Statement {
-    public String value(Customer aCustumer){
-        Enumeration rentals = aCustumer.getRentals();
-        String result = getCustumerName(aCustumer);
-        while (rentals.hasMoreElements()) {
-            Rental each = (Rental) rentals.nextElement();
-            //show figures for this rental
-            result += getRentalFigures(each);
-        }
-        //add footer lines
-        result +=  getFooter(aCustumer);
-        return result;
-    }
-
+    
     public String getCustumerName(Customer aCustumer){
         return "Rental Record for " + aCustumer.getName() + "\n";
     }
